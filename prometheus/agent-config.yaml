@@ -1,0 +1,14 @@
+metrics:
+  global:
+    scrape_interval: 10s
+  configs:
+  - name: hosted-prometheus
+    scrape_configs:
+      - job_name: node
+        static_configs:
+        - targets: ['localhost:2112']
+    remote_write:
+      - url: https://prometheus-prod-01-eu-west-0.grafana.net/api/prom/push
+        basic_auth:
+          username: 878819
+          password: glc_eyJvIjoiODE4NTA5IiwibiI6InRlc3QyIiwiayI6Ik9RZnhLMURNMG1oUzQ1SFozZTY5MDExTCIsIm0iOnsiciI6ImV1In19
