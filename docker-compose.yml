@@ -1,6 +1,6 @@
 version: '3.8'
 services:
-  mqtt:
+  mqttbroker:
     image: eclipse-mosquitto:2.0
     restart: unless-stopped
     volumes:
